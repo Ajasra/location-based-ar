@@ -51,10 +51,17 @@
             }
         }
     </style>
+    
     <div class="arjs-loader">
         <div class="arjs-loader-spinner"></div>
     </div>
+
     <script>
+        function log(msg){
+            alert(msg);
+            console.log(msg);
+        };
+
         //////////////////////////////////////////////////////////////////////////////////
         //		Init
         //////////////////////////////////////////////////////////////////////////////////
@@ -116,7 +123,8 @@
 
         // listener for end loading of NFT marker
         window.addEventListener('arjs-nft-loaded', function(ev){
-          console.log(ev);
+          //console.log(ev);
+          log(ev);
         })
 
         function onResize(){
@@ -173,6 +181,7 @@
         threeGLTFLoader.load("/location-based-ar/resources/Flamingo.glb", function (gltf) {
             model = gltf.scene.children[0];
             model.name = 'Flamingo';
+            log('flamingo');
 
             var animation = gltf.animations[0];
             var mixer = new THREE.AnimationMixer(model);
