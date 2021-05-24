@@ -764,7 +764,7 @@ function load(msg) {
     } else if (reC == false) {
         camUrl = basePath + '/' + msg.param;
     }
-	camUrl = basePath + '/' + 'data/data/camera_para.dat';
+	camUrl = basePath + '/location-based-ar/' + 'data/data/camera_para.dat';
 	console.log(camUrl);
     var onLoad = function () {
         ar = new ARController(msg.pw, msg.ph, param);
