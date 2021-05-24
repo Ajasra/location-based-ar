@@ -765,7 +765,6 @@ function load(msg) {
         camUrl = basePath + '/' + msg.param;
     }
 	console.log(camUrl);
-    alert(camUrl);
     var onLoad = function () {
         ar = new ARController(msg.pw, msg.ph, param);
         var cameraMatrix = ar.getCameraMatrix();
