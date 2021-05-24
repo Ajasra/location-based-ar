@@ -181,7 +181,7 @@
         threeGLTFLoader.load("/location-based-ar/resources/Flamingo.glb", function (gltf) {
             model = gltf.scene.children[0];
             model.name = 'Flamingo';
-            log('flamingo');
+            log(model);
 
             var animation = gltf.animations[0];
             var mixer = new THREE.AnimationMixer(model);
@@ -218,6 +218,7 @@
 
                 // update scene.visible if the marker is seen
                 scene.visible = camera.visible;
+                scene.visible = true;
 
                 renderer.render(scene, camera);
             };
