@@ -162,11 +162,11 @@
         // init controls for camera
         var markerControls = new THREEx.ArMarkerControls(arToolkitContext, camera, {
             type : 'nft',
-            descriptorsUrl : '/location-based-ar/data/dataNFT/glen1',
+            descriptorsUrl : 'location-based-ar/data/dataNFT/pinball',
             changeMatrixMode: 'cameraTransformMatrix'
         })
 
-        scene.visible = false
+        scene.visible = true
 
         var root = new THREE.Object3D();
         scene.add(root);
