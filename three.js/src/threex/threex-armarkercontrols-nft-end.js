@@ -44,6 +44,7 @@ function load(msg) {
         } else if (reM == false) {
             nftMarkerUrl = basePath + '/' + msg.marker;
         }
+        console.log(nftMarkerUrl + " threeex")
         ar.loadNFTMarker(nftMarkerUrl, function (markerId) {
             ar.trackNFTMarkerId(markerId);
             postMessage({ type: 'endLoading' })
