@@ -32,7 +32,6 @@ function load(msg) {
     } else if (reC == false) {
         camUrl = basePath + '/' + msg.param;
     }
-    console.log(camUrl + " threeex");
     var onLoad = function () {
         ar = new ARController(msg.pw, msg.ph, param);
         var cameraMatrix = ar.getCameraMatrix();
@@ -45,7 +44,6 @@ function load(msg) {
         } else if (reM == false) {
             nftMarkerUrl = basePath + '/' + msg.marker;
         }
-        console.log(nftMarkerUrl + " threeex")
         ar.loadNFTMarker(nftMarkerUrl, function (markerId) {
             ar.trackNFTMarkerId(markerId);
             postMessage({ type: 'endLoading' })
