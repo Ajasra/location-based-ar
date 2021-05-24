@@ -181,7 +181,7 @@
         threeGLTFLoader.load("/location-based-ar/resources/Flamingo.glb", function (gltf) {
             model = gltf.scene.children[0];
             model.name = 'Flamingo';
-            log(model);
+            //log(model);
 
             var animation = gltf.animations[0];
             var mixer = new THREE.AnimationMixer(model);
