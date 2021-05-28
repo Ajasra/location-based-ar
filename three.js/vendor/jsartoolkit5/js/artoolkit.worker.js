@@ -36,6 +36,7 @@ if ('function' === typeof importScripts) {
                 ar.trackNFTMarkerId(markerId);
                 postMessage({ type: 'endLoading' })
             }, function (err) {
+                console.log(markerPath)
                 console.log('Error in loading marker on Worker', err)
             });
 
