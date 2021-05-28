@@ -23,7 +23,7 @@ if ('function' === typeof importScripts) {
 
     function load(msg) {
         var corsAnyway = 'https://cors-anywhere.herokuapp.com/';
-        var markerPath = corsAnyway + msg.marker;
+        var markerPath = msg.marker;
 
         console.debug('Loading marker at: ', markerPath);
 
